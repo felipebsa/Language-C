@@ -1,19 +1,23 @@
-# Estudos de Linguagem C
+# Learning C
 
-Repositório com exercícios e aulas práticas de Linguagem C do 2º bimestre do curso de Desenvolvimento de Sistemas.
+Repository with exercises and practical lessons in C Language from the 2nd semester of the Systems Development course.
 
-## Aulas
+## Lessons
 
-| Arquivo | Conteúdo |
-|--------|----------|
-| `aula01.c` | Calculadora de IMC — `scanf`, `printf`, `if/else if` |
-| `aula02.c` | Triângulo de asteriscos — laços `for` aninhados |
-|[...]|[...]|
+| Folder | Content | Topics learned |
+|--------|---------|----------------|
+| `aula01/` | Basic concepts | variables, `float`, `if/else if`, `scanf`, `printf` |
+| `aula02/` | Loop syntax | nested `for`, decrement, increment, pattern logic |
+| `aula03/` | — | — |
+| `aula04/` | — | — |
+| `aula05/` | — | — |
+| `aula06/` | — | — |
 
-## Como rodar
+---
+## How to run
 
 ```
 bash
-gcc aula01.c -o aula01
-./aula01
+gcc aula01/main.c -o programa
+./programa
 ```
