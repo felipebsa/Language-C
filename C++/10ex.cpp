@@ -1,14 +1,14 @@
 /*
 * Instituição: EtecVAV - Vasco Antonio Vechiarutti
 *
-* Arquivo: 10ex.cpp
+* Arquivo: 10ex_fixed.cpp
 * Data: 01/05/2026
 * Autor: Felipe Barbosa Santos
-* Descrição: 
-* Simule um jogo de adivinhação. O programa deve gerar um número aleatório 
-* e o jogador precisa acertar o número. 
-* Cada vez que o jogador informar o número, deve exibir se o 
-* palpite é muito alto, muito baixo ou correto. Quando for correto, 
+* Descrição:
+* Simule um jogo de adivinhação. O programa deve gerar um número aleatório
+* e o jogador precisa acertar o número.
+* Cada vez que o jogador informar o número, deve exibir se o
+* palpite é muito alto, muito baixo ou correto. Quando for correto,
 * exibir a quantidade de palpites.
 */
 
@@ -16,67 +16,57 @@
 #include <cstdlib>
 #include <ctime>
 #include <cctype>
-
 using namespace std;
-
-/*
-Programa: Jogo de adivinhação
-Objetivo: Sortear um número de 1 a 100 e dar ao jogador 5 tentativas
-Autores: Zaion e Leo
-*/
 
 int main() {
     srand(time(NULL));
 
-    char opcao = 'S';
+    char choice = 'Y'; 
 
-    cout << "=== Guessing Game [1 a 100] ===" << endl << endl;
+    cout << "=== Guessing Game [1 to 100] ===" << endl << endl;
 
-    while (opcao == 'Y') {
+    while (choice == 'Y') {
         int secretnumber = 1 + (rand() % 100);
         int maxattempts = 6;
         bool correct = false;
 
         cout << "A number between 1 and 100 was drawn." << endl;
-        cout << "you have " << maxattempts << " attemps for to hit." << endl << endl;
+        cout << "You have " << maxattempts << " attempts to guess it." << endl << endl;
 
         for (int attempt = 1; attempt <= maxattempts; attempt++) {
             int guess;
 
-            cout << "attempt " << attempt << " the " << maxattempts
-                 << ". write your guess: ";
+            cout << "Attempt " << attempt << " of " << maxattempts << ". Your guess: ";
 
             if (!(cin >> guess)) {
                 cin.clear();
                 cin.ignore(10000, '\n');
-                cout << "write a int number" << endl;
+                cout << "Please enter a valid integer." << endl;
                 attempt--;
                 continue;
             }
 
             if (guess == secretnumber) {
-                cout << "You Hit! The number is " << secretnumber << "." << endl;
+                cout << "Correct! The number was " << secretnumber
+                     << ". You got it in " << attempt << " guess(es)!" << endl;
                 correct = true;
                 break;
             } else if (guess < secretnumber) {
-                cout << "Wrong. Hint: a number is BIGGER for " << guess << "." << endl;
+                cout << "Too low! Try a bigger number." << endl;
             } else {
-                cout << "Wrong. Hint: a number is SMALL for " << guess << "." << endl;
+                cout << "Too high! Try a smaller number." << endl;
             }
         }
 
         if (!correct) {
-            cout << endl
-                 << "Your attemps are over you number is:  "
-                 << secretnumber << "." << endl;
+            cout << endl << "Out of attempts! The number was: " << secretnumber << "." << endl;
         }
 
-        cout << endl << "want to play again? (Y/N): ";
-        cin >> opcao;
+        cout << endl << "Play again? (Y/N): ";
+        cin >> choice;
+        choice = toupper(choice);
 
-        opcao = toupper(opcao);
-
-        if (opcao != 'Y') {
+        if (choice != 'Y') {
             cout << endl << "Thanks for playing!" << endl;
         }
 
