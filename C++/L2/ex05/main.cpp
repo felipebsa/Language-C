@@ -1,3 +1,14 @@
+/*
+* Instituição: EtecVAV - Vasco Antonio Vechiarutti
+*
+* Arquivo: ex05.cpp
+* Data: 01/06/2026
+* Autor: Felipe Barbosa Santos
+* Descrição:
+* Ler uma palavra. Verificar se é palíndromo.
+* Criar uma função que retorne verdadeiro ou falso.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,8 +26,8 @@ void palin() {
     else {
         cout << "not is palindromo";
     }
-
 }
+
 int main() {
     palin();
     return 0;

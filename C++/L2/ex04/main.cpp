@@ -1,64 +1,35 @@
+/*
+* Instituição: EtecVAV - Vasco Antonio Vechiarutti
+*
+* Arquivo: ex04.cpp
+* Data: 01/06/2026
+* Autor: Felipe Barbosa Santos
+* Descrição:
+* Ler dois números inteiros e calcular adicao, subtracao, multiplicacao e divisao.
+* Criar uma função para cada operação.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-int sum() {
-    int n1, n2, sum = 0;
-    cin >> n1;
-    cin >> n2;
-    sum = n1 + n2;
-    cout << sum << endl;
-    return 0;
-}
-
-int sub() {
-    int n1, n2, sub = 0;
-    cin >> n1;
-    cin >> n2;
-    sub = n1 - n2;
-    cout << sub << endl;
-    return 0;
-}
-
-int multi() {
-    int n1, n2, multi = 0;
-    cin >> n1;
-    cin >> n2;
-    multi = n1 * n2;
-    cout << multi << endl;
-    return 0;
-}
-
-int div() {
-    int n1, n2, div = 0;
-    cin >> n1;
-    cin >> n2;
-    div = n1 / n2;
-    cout << div << endl;
-    return 0;
-}
+int sum(int n1, int n2) { return n1 + n2; }
+int sub(int n1, int n2) { return n1 - n2; }
+int multi(int n1, int n2) { return n1 * n2; }
+float divi(int n1, int n2) { return (float)n1 / n2; }
 
 int main() {
     char choice;
-    bool power = true;
+    int n1, n2;
     cout << "---- Calculator ----" << endl;
-        cout << "Calculator" << endl << "choice [+] [-] [*] [/] or [exit]" << endl;
-        cin >> choice;
-        if (choice == '+') {
-            sum();
-        }
-        else if (choice == '-') {
-            sub();
-        }
-        else if (choice == '*') {
-            multi();
-        }
-        else if (choice == '/') {
-            div();
-        }
-        else {
-            return 0;
-        }
+    cout << "choice [+] [-] [*] [/]" << endl;
+    cin >> choice >> n1 >> n2;
+    if (choice == '+') cout << sum(n1, n2);
+    else if (choice == '-') cout << sub(n1, n2);
+    else if (choice == '*') cout << multi(n1, n2);
+    else if (choice == '/') cout << divi(n1, n2);
+    else cout << "invalid";
+    return 0;
 }

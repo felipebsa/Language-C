@@ -1,3 +1,14 @@
+/*
+* Instituição: EtecVAV - Vasco Antonio Vechiarutti
+*
+* Arquivo: ex06.cpp
+* Data: 01/06/2026
+* Autor: Felipe Barbosa Santos
+* Descrição:
+* Ler um número. Exibir o dia da semana correspondente.
+* Criar uma função para essa verificação.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -16,8 +27,9 @@ void week() {
         case 6: cout << "Sabado"; break;
         case 7: cout << "Domingo"; break;
         default: cout << "1-7";
-    };
+    }
 }
+
 int main() {
     week();
     return 0;

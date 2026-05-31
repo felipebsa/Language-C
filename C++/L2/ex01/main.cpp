@@ -1,3 +1,14 @@
+/*
+* Instituição: EtecVAV - Vasco Antonio Vechiarutti
+*
+* Arquivo: ex01.cpp
+* Data: 01/06/2026
+* Autor: Felipe Barbosa Santos
+* Descrição:
+* Ler um número inteiro. Exibir a soma dos números ímpares até o número lido.
+* Criar uma função que retorne verdadeiro para números ímpares.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -21,10 +32,9 @@ bool impar() {
         cout << "write a number N > 0";
     }
     return found;
-
 }
+
 int main() {
     impar();
-    
     return 0;
 }
