@@ -20,12 +20,12 @@ Linguagem-C/
 
 | Folder | Content | Topics |
 |--------|---------|--------|
-| `aula01/` | Basic concepts | variables, `float`, `if/else if`, `scanf`, `printf` |
-| `aula02/` | Loop syntax | nested `for`, decrement, increment, pattern logic |
-| `aula03/` | Arrays and strings | `int[]`, `char[]`, `fgets`, `strlen`, loops with arrays |
-| `aula04/` | Functions | `float`, `void`, parameters, return, refactoring |
-| `aula05/` | Pointers | `*`, `&`, memory address, pass by reference |
-| `aula06/` | Structs | `typedef`, `struct`, array of structs, functions with structs |
+| `Lesson01/` | Basic concepts | variables, `float`, `if/else if`, `scanf`, `printf` |
+| `Lesson02/` | Loop syntax | nested `for`, decrement, increment, pattern logic |
+| `Lesson03/` | Arrays and strings | `int[]`, `char[]`, `fgets`, `strlen`, loops with arrays |
+| `Lesson04/` | Functions | `float`, `void`, parameters, return, refactoring |
+| `Lesson05/` | Pointers | `*`, `&`, memory address, pass by reference |
+| `Lesson06/` | Structs | `typedef`, `struct`, array of structs, functions with structs |
 
 ---
 
